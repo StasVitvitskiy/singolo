@@ -292,7 +292,7 @@ nav .dot {
     background-color: #f2f2f2;
     position: relative;
 }
-.services_content h1 {
+.services_content__heading {
     font-size: 1.6666666666666667rem;
     margin: 0;
     font-weight: 900;
