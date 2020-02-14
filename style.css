@@ -346,3 +346,12 @@ nav .dot {
     height: 28px;
     line-height: 18px;
 }
+.services__text span:nth-child(1) {
+    letter-spacing: 0.1512px;
+}
+.services__text span:nth-child(2) {
+    letter-spacing: 0px;
+}
+.custom_design h4 {
+    letter-spacing: -0.2px;
+}
