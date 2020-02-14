@@ -212,12 +212,13 @@ main {
     line-height: 6px;
     font-weight: 700;
     text-align: left;
+    letter-spacing: -0.5px
 }
 .star {
     color: #f06c64;
 }
 nav {
-    width: calc(100vw * 0.3637254901960784);
+    width: 20.61111111111111rem;
     height:1.2222222222222223rem;
     display: flex;
     align-items: flex-end;
