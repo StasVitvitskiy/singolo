@@ -331,14 +331,14 @@ nav {
     display: grid;
     height:auto;
 }
-.about-us h1 {
+.about-us h2 {
     color: #666d89;
     font-size:1.7rem;
     height: 5.666666666666667rem;
     display: flex;
     align-items: flex-end;
 }
-h1,h4,p {
+h1,h2,h4,p {
     margin:0;
     padding:0;
 }
