@@ -197,7 +197,7 @@ body {
 .portfolio .wrapper {
     display: grid;
     grid-template-rows: 178px 1fr;
-    grid-row-gap: 18px;
+    grid-row-gap: 1rem;
 }
 .wrapper {
     margin-left: 3.9215686274509802%;
@@ -221,12 +221,12 @@ header {
 }
 header h1 {
     margin:0;
-    height: 54px;
+    height: 3rem;
     color: #666d89;
     font-size: 1.7rem;
 }
 header p {
-    height: 39px;
+    height: 2.1666666666666665rem;
     line-height: 1.6666666666666667rem;
     color: #767e9e;
     font-weight: 300;
@@ -257,7 +257,7 @@ nav ul .active {
 nav ul {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-column-gap: 10px;
+    grid-column-gap: 0.6666666666666666rem;
     padding: 0;
     margin:0;
 }
@@ -334,7 +334,7 @@ nav {
 .about-us h1 {
     color: #666d89;
     font-size:1.7rem;
-    height:102px;
+    height: 5.666666666666667rem;
     display: flex;
     align-items: flex-end;
 }
@@ -343,16 +343,16 @@ h1,h4,p {
     padding:0;
 }
 .about-us__about-us {
-    line-height: 30px;
+    line-height: 1.6666666666666667rem;
     color: #767e9e;
     font-weight:300;
-    height: 48px;
+    height: 2.6666666666666665rem;
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.15px;
 }
 .about-us__about-us + p {
-    line-height: 28px;
+    line-height: 1.5555555555555556rem;
     color: #767e9e;
     font-weight:300;
 }
@@ -371,15 +371,19 @@ h1,h4,p {
     grid-column-gap: 1.1111111111111112rem;
     color: #666d89;
 }
-.about-us__names p {
+.about-us__names p:nth-child(2) {
     font-size: 0.6666666666666666rem;
-    line-height: 22px;
-    height: 53px;
+    line-height: 1.2222222222222223rem;
+    height: 1.7222222222222223rem;
     display: flex;
     align-items: flex-end;
 }
+.about-us__names p:nth-child(3) {
+    font-size: 0.6666666666666666rem;
+    line-height: 1.2222222222222223rem;
+}
 .about-us__names section h4 {
-    height: 35px;
+    height: 1.9444444444444444rem;
     display: flex;
     align-items: flex-end;
 }
@@ -387,22 +391,22 @@ h1,h4,p {
     display: grid;
     grid-template-columns: repeat(4, auto);
     width: 53%;
-    height: 55px;
+    height: 3.111111111111111rem;
     align-content: flex-end;
 }
 .about-us {
     position: relative;
     background-color: #f2f2f2;
-    height: 734px;
+    min-height: 40.77777777777778rem;
 }
 .about-us:after {
-    height: 6px;
+    height: 0.3333333333333333rem;
     background-color: white;
     position: absolute;
     width:100%;
     content: '';
     z-index:2;
-    bottom: -6px;
+    bottom: -0.3333333333333333rem;
 }
 .icons img:hover {
     cursor: pointer;
@@ -415,8 +419,11 @@ h1,h4,p {
     display: block;
 }
 .about-us__names section:nth-child(1) p:nth-child(2) {
-    letter-spacing: -0.09px;
+    letter-spacing: -0.06px;
 }
 .about-us__names section:nth-child(2) p:nth-child(2), .about-us__names section:nth-child(3) p:nth-child(2) {
     letter-spacing: 0.11px;
+}
+.about-us__names-wrapper {
+    height:209px;
 }
