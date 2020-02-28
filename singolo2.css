@@ -324,6 +324,9 @@ nav {
     width: 100%;
     height:10.38888888888889rem;
 }
+.portfolio__photoGrid div:nth-child(n+13) {
+    display: none;
+}
 .about-us .wrapper{
     display: grid;
     height:auto;
@@ -343,9 +346,15 @@ h1,h4,p {
     line-height: 30px;
     color: #767e9e;
     font-weight:300;
-    height: 77px;
+    height: 48px;
     display: flex;
     align-items: flex-end;
+    letter-spacing: 0.15px;
+}
+.about-us__about-us + p {
+    line-height: 28px;
+    color: #767e9e;
+    font-weight:300;
 }
 .about-us__employees {
     display: grid;
@@ -358,7 +367,7 @@ h1,h4,p {
 }
 .about-us__names {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-column-gap: 1.1111111111111112rem;
     color: #666d89;
 }
@@ -394,4 +403,20 @@ h1,h4,p {
     content: '';
     z-index:2;
     bottom: -6px;
+}
+.icons img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.about-us__names section h4 span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+.about-us__names section:nth-child(1) p:nth-child(2) {
+    letter-spacing: -0.09px;
+}
+.about-us__names section:nth-child(2) p:nth-child(2), .about-us__names section:nth-child(3) p:nth-child(2) {
+    letter-spacing: 0.11px;
 }
