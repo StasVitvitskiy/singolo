@@ -242,7 +242,7 @@ h1,h2,h3,h4,h5,h6,p {
     grid-column-start: 1;
     grid-column-end: 3;
 }
-form input {
+#form input {
     height: 38px;
     border-radius: 5px;
     background-color: #d6564f;
@@ -257,21 +257,36 @@ form input {
 #form {
     display: grid;
     width: 34.5rem;
-    grid-row-gap: 0.7777777777777778rem;
+    grid-row-gap: 0.8888888888888888rem;
 
 }
-input::placeholder, textarea::placeholder {
+#form input::placeholder,
+#form textarea::placeholder,
+#form ::-webkit-input-placeholder
+{
     font-size: 0.6666666666666666rem;
-    line-height: 22px;
     color: #f48c8f;
-    text-indent: 0.67rem;
 }
-textarea::placeholder {
-    text-indent: 0.67rem;
-    line-height: 3em;
+
+#form :-ms-input-placeholder,
+#form ::-moz-placeholder,
+#form :-moz-placeholder {
+    font-size: 0.6666666666666666rem;
+    color: #f48c8f;
+}
+#form input,
+#form textarea {
+    padding-left: 0.79rem;
+    color: #f48c8f;
+    box-sizing: border-box;
+}
+#form textarea {
+    padding-top: 0.9em;
 }
 .contact-info {
     color: #f0d8d9;
+    line-height: 17px;
+    letter-spacing: 0.15px;
 }
 .contact-info__text, .contact-info__icon-text {
     font-size: 12px;
@@ -280,7 +295,7 @@ textarea::placeholder {
 }
 .contact-info__text {
     height: 113px;
-    transform: translate(1px, 6px);
+    transform: translate(0px, 10px);
     width: 302px;
     text-align: justify;
 }
@@ -318,10 +333,10 @@ textarea::placeholder {
 }
 .get-a-quote-text p:first-child {
     letter-spacing: 0.15px;
-    line-height: 19px;
+    line-height: 14px;
 }
 .get-a-quote-text p:nth-child(2) {
-    line-height: 37px;
+    line-height: 43px;
 }
 a {
     text-decoration: none;
@@ -348,4 +363,13 @@ a {
     .get-a-quote-section .wrapper {
         justify-content: center;
     }
+}
+input,textarea {
+    font-family: Lato;
+}
+.address {
+    line-height: 21px;
+}
+.phone {
+    line-height: 23px;
 }
