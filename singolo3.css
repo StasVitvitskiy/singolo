@@ -281,7 +281,8 @@ textarea::placeholder {
 .contact-info__text {
     height: 113px;
     transform: translate(1px, 6px);
-    width: 311px;
+    width: 302px;
+    text-align: justify;
 }
 .contact-info__img {
     display: inline-grid;
@@ -311,10 +312,40 @@ textarea::placeholder {
     justify-content: space-between;
     width: 154px;
 }
+.footer__social-icons img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
 .get-a-quote-text p:first-child {
     letter-spacing: 0.15px;
     line-height: 19px;
 }
 .get-a-quote-text p:nth-child(2) {
     line-height: 37px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+#form {
+    position: relative;
+}
+#form button[type=submit] {
+    position: absolute;
+    top: 21rem;
+    height: 38px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    border: hidden;
+    width: 20rem;
+    color: #f48c8f;
+}
+#form button[type=submit]:hover {
+    background-color: #d34c45;
+    cursor: pointer;
+}
+@media only screen and (min-width: 1050px) {
+    .get-a-quote-section .wrapper {
+        justify-content: center;
+    }
 }
