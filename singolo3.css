@@ -282,11 +282,13 @@ h1,h2,h3,h4,h5,h6,p {
 }
 #form textarea {
     padding-top: 0.9em;
+    border-radius: 5px;
 }
 .contact-info {
     color: #f0d8d9;
     line-height: 17px;
     letter-spacing: 0.15px;
+    height: 27px;
 }
 .contact-info__text, .contact-info__icon-text {
     font-size: 12px;
@@ -294,22 +296,21 @@ h1,h2,h3,h4,h5,h6,p {
     line-height: 22px;
 }
 .contact-info__text {
-    height: 113px;
-    transform: translate(0px, 10px);
+    height: 103px;
     width: 302px;
     text-align: justify;
+    display: flex;
+    align-items: flex-start;
 }
 .contact-info__img {
-    display: inline-grid;
-    grid-template-columns: 0.5fr 2fr;
+    display: grid;
+    grid-template-columns: 16px 2fr;
     align-items: center;
     justify-content: center;
+    grid-column-gap: 8px;
 }
 .contact-info__img img:first-child {
-    transform: translate(4px, 0px);
-}
-.contact-info__icon-text {
-    transform: translate(-6px, 2px);
+    justify-self: center;
 }
 .footer {
     height: 86px;
@@ -320,7 +321,6 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .copyright {
     color: #626984;
-    transform: translate(2px, 0px);
 }
 .footer__social-icons {
     display: flex;
@@ -368,8 +368,11 @@ input,textarea {
     font-family: Lato;
 }
 .address {
-    line-height: 21px;
+    line-height: 31px;
 }
 .phone {
-    line-height: 23px;
+    line-height: 12px;
+}
+.email {
+    line-height: 32px;
 }
