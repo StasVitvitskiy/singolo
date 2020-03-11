@@ -12,16 +12,16 @@
                 SINGOLO<span class="star">*</span>
             </h1>
             <nav>
-                <ul>
-                    <li class="active">HOME</li>
+                <ul id="menu">
+                    <li data-selector=".content" class="active">HOME</li>
                     <li class="dot">&nbsp;</li>
-                    <li>SERVICES</li>
+                    <li data-selector=".services">SERVICES</li>
                     <li class="dot">&nbsp;</li>
-                    <li>PORTFOLIO</li>
+                    <li data-selector=".portfolio">PORTFOLIO</li>
                     <li class="dot">&nbsp;</li>
-                    <li>ABOUT</li>
+                    <li data-selector=".about-us">ABOUT</li>
                     <li class="dot">&nbsp;</li>
-                    <li>CONTACT</li>
+                    <li data-selector=".get-a-quote-section">CONTACT</li>
                 </ul>
             </nav>
         </div>
@@ -206,6 +206,17 @@
         </div>
 
         <div class="get-a-quote-section">
+            <div id="message-block" class="hidden">
+                <div id="message">
+                    <p>Письмо отправлено</p>
+                    <br>
+                    <p>Тема: <span id="subjectP"></span></p>
+                    <br>
+                    <p>Описание: <span id="describe"></span></p>
+                    <br>
+                    <button id="close-btn">OK</button>
+                </div>
+            </div>
             <div class="wrapper">
                 <div class="get-a-quote-grid">
                     <div class="get-a-quote-grid__elements">
@@ -222,9 +233,9 @@
                     <form id="form" action="/">
                         <input name="name" placeholder="Name (Required)" type="text" minlength="2" required>
                         <input name="email" placeholder="Email (Required)" type="email" required>
-                        <input name="subject" placeholder="Subject" type="text">
+                        <input id="subject" name="subject" placeholder="Subject" type="text">
                         <textarea class="form__project-description" placeholder="Describe your project in detail..." name="description" id="description" cols="30" rows="10"></textarea>
-                        <button type="submit">Submit</button>
+                        <button id="btn" type="submit">Submit</button>
                     </form>
                     <div>
                         <h4 class="contact-info">Contact Information</h4>
@@ -255,4 +266,5 @@
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>

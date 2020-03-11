@@ -790,3 +790,25 @@ input,textarea {
 .email {
     line-height: 32px;
 }
+#message-block {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 6px);
+    top: 0;
+    left: 0;
+    background: #0008;
+    z-index: 3;
+}
+#message-block.hidden {
+    display: none;
+}
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+    text-align: center;
+    background: darkgray;
+    padding:2rem;
+    transform: translate(-50%, -50%);
+}
