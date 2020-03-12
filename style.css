@@ -812,3 +812,9 @@ input,textarea {
     padding:2rem;
     transform: translate(-50%, -50%);
 }
+.portfolio__photoGrid div:hover {
+    cursor: pointer;
+}
+.img_active {
+    border: 5px solid #F06C64;
+}

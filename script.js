@@ -1,9 +1,10 @@
 const MENU = document.getElementById('menu');
 const CLOSE_BUTTON = document.getElementById('close-btn');
 const FORM = document.getElementById('form');
+const IMG = document.getElementById('portfolio');
 
 function scrollToElement(pageElement) {
-    var positionX = 0,
+    let positionX = 0,
         positionY = 0;
 
     while(pageElement !== null){
@@ -13,7 +14,10 @@ function scrollToElement(pageElement) {
         window.scrollTo(positionX, positionY);
     }
 }
-
+IMG.addEventListener('click', (event) => {
+    IMG.querySelectorAll('div').forEach(el => el.classList.remove('img_active'));
+    event.target.classList.add('img_active');
+});
 
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
@@ -21,7 +25,6 @@ MENU.addEventListener('click', (event) => {
     element.classList.add('active');
     const dataSelector = element.getAttribute("data-selector");
     let elToScroll = document.querySelector(dataSelector);
-    console.log(dataSelector);
     scrollToElement(elToScroll);
 });
 FORM.addEventListener('submit', (event) => {
