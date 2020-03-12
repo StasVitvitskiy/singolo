@@ -254,7 +254,7 @@ nav .dot {
     position: relative;
 }
 .slider:after {
-    background-color: #ea676b;
+    background-color: inherit;
     height: 6px;
     position: absolute;
     width:100%;
@@ -281,7 +281,7 @@ nav .dot {
     transform: scale(1.2) rotate(180deg);
 }
 .iphone-vertical {
-    margin-right: 2%;
+    margin-right: 8%;
 }
 .iphone:hover {
     transform: translateY(-10px);
@@ -817,4 +817,77 @@ input,textarea {
 }
 .img_active {
     border: 5px solid #F06C64;
+}
+.slide-one {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.display-none {
+    display: none;
+}
+
+
+
+
+.slide-two {
+    justify-content: center;
+    max-height: 483px;
+}
+.carousel {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.item {
+    display: none;
+    animation:0.5s ease-in-out;
+    position: relative;
+}
+.next {
+    display: flex;
+    position: absolute;
+    top:0;
+    width:100%;
+}
+.active {
+    display: flex;
+}
+.left {
+    left:0;
+    right:auto;
+}
+.right {
+    left:auto;
+    right:0;
+}
+.to-left {
+    animation-name:left;
+}
+.to-right {
+    animation-name:right;
+    animation-direction: reverse;
+}
+.from-left{
+    animation-name:left;
+    animation-direction: reverse;
+}
+.from-right {
+    animation-name:right;
+}
+@keyframes left {
+    from {
+        left:0;
+    }
+    to {
+        left:-100%;
+    }
+}
+@keyframes right {
+    from {
+        left:100%;
+    }
+    to {
+        left:0;
+    }
 }
