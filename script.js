@@ -5,6 +5,7 @@ const IMG = document.getElementById('portfolio');
 const SLIDER = document.getElementById('slider');
 const VERTICAL = document.getElementById('vertical');
 const HORIZONTAL = document.getElementById('horizontal');
+const TABS = document.getElementById('tabs');
 function scrollToElement(pageElement) {
     let positionX = 0,
         positionY = 0;
@@ -16,6 +17,14 @@ function scrollToElement(pageElement) {
         window.scrollTo(positionX, positionY);
     }
 }
+TABS.addEventListener('click', (event) => {
+    TABS.querySelectorAll('li').forEach(el => el.classList.remove('portfolio-active'));
+    if(!event.target.classList.contains('tabs')) {
+        event.target.classList.add('portfolio-active');
+        let deleted = IMG.removeChild(document.getElementById('portfolio').querySelectorAll('div')[11]);
+        IMG.prepend(deleted);
+    }
+})
 VERTICAL.addEventListener('click', (event) => {
         if(VERTICAL.classList.contains("normal-screen-vertical")) {
             event.target.classList.remove("normal-screen-vertical");

@@ -404,7 +404,7 @@ nav .dot {
     font-weight: 300;
     margin:0;
 }
-.portfolio__nav ul li {
+.portfolio-items {
     font-size: 0.6666666666666666rem;
     color: #767e9e;
     line-height:1.2222222222222223rem;
@@ -421,10 +421,7 @@ nav .dot {
     cursor: pointer;
 }
 .portfolio__nav ul .active {
-    color: #dedede;
-    border:1px solid #dedede;
-    cursor: pointer;
-    letter-spacing: 0.9px;
+
 }
 .portfolio__nav ul {
     display: grid;
@@ -902,4 +899,10 @@ input,textarea {
 }
 .normal-screen-horizontal {
     content: url("assets/iPhone Horizontal.svg");
+}
+.portfolio-active {
+    color: #dedede;
+    border:1px solid #dedede;
+    cursor: pointer;
+    letter-spacing: 0.9px;
 }
