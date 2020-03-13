@@ -3,6 +3,8 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 const FORM = document.getElementById('form');
 const IMG = document.getElementById('portfolio');
 const SLIDER = document.getElementById('slider');
+const VERTICAL = document.getElementById('vertical');
+const HORIZONTAL = document.getElementById('horizontal');
 function scrollToElement(pageElement) {
     let positionX = 0,
         positionY = 0;
@@ -14,9 +16,30 @@ function scrollToElement(pageElement) {
         window.scrollTo(positionX, positionY);
     }
 }
+VERTICAL.addEventListener('click', (event) => {
+        if(VERTICAL.classList.contains("normal-screen-vertical")) {
+            event.target.classList.remove("normal-screen-vertical");
+            event.target.classList.add("black-screen-vertical");
+        } else {
+            event.target.classList.remove("black-screen-vertical");
+            event.target.classList.add("normal-screen-vertical");
+        }
+});
+HORIZONTAL.addEventListener('click', (event) => {
+    if(HORIZONTAL.classList.contains("normal-screen-horizontal")) {
+        event.target.classList.remove("normal-screen-horizontal");
+        event.target.classList.add("black-screen-horizontal");
+    } else {
+        event.target.classList.remove("black-screen-horizontal");
+        event.target.classList.add("normal-screen-horizontal");
+    }
+});
+
 IMG.addEventListener('click', (event) => {
     IMG.querySelectorAll('div').forEach(el => el.classList.remove('img_active'));
-    event.target.classList.add('img_active');
+    if(!event.target.classList.contains('portfolio__photoGrid')) {
+        event.target.classList.add('img_active');
+    }
 });
 
 MENU.addEventListener('click', (event) => {

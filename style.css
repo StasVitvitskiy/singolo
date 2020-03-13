@@ -284,7 +284,6 @@ nav .dot {
     margin-right: 8%;
 }
 .iphone:hover {
-    transform: translateY(-10px);
     cursor: pointer;
 }
 .services {
@@ -890,4 +889,17 @@ input,textarea {
     to {
         left:0;
     }
+}
+.black-screen-vertical {
+    content: url("assets/vertical-screen.svg");
+}
+.normal-screen-vertical {
+    content: url("assets/iPhone Vertical.svg");
+}
+
+.black-screen-horizontal {
+    content: url("assets/horizontal-screen.svg");
+}
+.normal-screen-horizontal {
+    content: url("assets/iPhone Horizontal.svg");
 }
