@@ -922,6 +922,9 @@ input,textarea {
 .text768px {
     display: none;
 }
+#tabs li {
+    user-select: none;
+}
 @media  screen and (max-width: 768px) {
     #vertical {
         width: 250px;

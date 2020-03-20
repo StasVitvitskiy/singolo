@@ -6,6 +6,11 @@ const SLIDER = document.getElementById('slider');
 const VERTICAL = document.getElementById('vertical');
 const HORIZONTAL = document.getElementById('horizontal');
 const TABS = document.getElementById('tabs');
+const SERVICES = document.querySelector('.services');
+const PORTFOLIO = document.querySelector('.portfolio');
+const ABOUT_US = document.querySelector('.about-us');
+const GET_A_QUOTE_SECTION = document.querySelector('.get-a-quote-section');
+const HEADER_HEIGHT = document.querySelector('header').clientHeight;
 function scrollToElement(pageElement) {
     let positionX = 0,
         positionY = 0;
@@ -16,7 +21,7 @@ function scrollToElement(pageElement) {
         pageElement = pageElement.offsetParent;
         window.scrollTo({
             left:positionX,
-            top:positionY,
+            top:positionY - HEADER_HEIGHT,
             behavior:'smooth'
         });
     }
@@ -237,4 +242,23 @@ const swipeDetect = (el) => {
 }
 let el = document.querySelector('.slider');
 swipeDetect(el);
+
+function observerCallback(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelector('#menu .active').classList.remove('active');
+            const className = entry.target.className;
+            const menuItem = document.querySelector(`[data-selector=".${className}"]`);
+            menuItem.classList.add('active');
+        }
+    })
+}
+const observer = new IntersectionObserver(observerCallback, {
+    threshold: 0.4
+});
+observer.observe(SLIDER);
+observer.observe(SERVICES);
+observer.observe(PORTFOLIO);
+observer.observe(ABOUT_US);
+observer.observe(GET_A_QUOTE_SECTION);
 
