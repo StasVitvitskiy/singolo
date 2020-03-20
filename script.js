@@ -14,7 +14,11 @@ function scrollToElement(pageElement) {
         positionX += pageElement.offsetLeft;
         positionY += pageElement.offsetTop;
         pageElement = pageElement.offsetParent;
-        window.scrollTo(positionX, positionY);
+        window.scrollTo({
+            left:positionX,
+            top:positionY,
+            behavior:'smooth'
+        });
     }
 }
 TABS.addEventListener('click', (event) => {
