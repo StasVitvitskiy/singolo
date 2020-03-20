@@ -550,6 +550,9 @@ h1,h2,h4,p {
     display: flex;
     align-items: flex-end;
 }
+.about-us__names p:nth-of-type(3) {
+    display: none;
+}
 .about-us__names p:nth-child(3) {
     font-size: 0.6666666666666666rem;
     line-height: 1.2222222222222223rem;
