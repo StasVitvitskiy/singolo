@@ -511,7 +511,7 @@ h1,h2,h4,p {
     margin:0;
     padding:0;
 }
-.about-us__about-us {
+.about-us__about-us, .about-us .text768px {
     line-height: 1.6666666666666667rem;
     color: #767e9e;
     font-weight:300;
@@ -519,6 +519,9 @@ h1,h2,h4,p {
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.15px;
+}
+.about-us .text768px {
+    display: none;
 }
 .about-us__about-us + p {
     line-height: 1.5555555555555556rem;
@@ -540,7 +543,7 @@ h1,h2,h4,p {
     grid-column-gap: 1.1111111111111112rem;
     color: #666d89;
 }
-.about-us__names p:nth-child(2) {
+.about-us__names p:nth-child(2), .about-us__names p:nth-of-type(3) {
     font-size: 0.6666666666666666rem;
     line-height: 1.2222222222222223rem;
     height: 1.7222222222222223rem;
@@ -912,4 +915,59 @@ input,textarea {
     left: 0;
     right: 0;
     z-index: 5;
+}
+.text768px {
+    display: none;
+}
+@media  screen and (max-width: 768px) {
+    #vertical {
+        width: 250px;
+        height: 330px;
+    }
+    #horizontal {
+        width: 330px;
+    }
+    .services {
+        height:650px;
+    }
+    .services__elements {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio {
+        height: 59rem;
+    }
+    .portfolio__photoGrid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .get-a-quote-text p:nth-child(1), .get-a-quote-text p:nth-child(2) {
+        display: none;
+    }
+    #form {
+        width:20.5rem;
+    }
+    .get-a-quote-text .text768px {
+        max-width: calc(100vw - 7.8%);
+        display: inline;
+    }
+    .get-a-quote-grid .get-a-quote-text  {
+        height:125px;
+    }
+    .about-us .about-us__about-us, .about-us .about-us__about-us + p {
+        display: none;
+    }
+    .about-us .text768px {
+        display: inline;
+        height:auto;
+    }
+    .about-us__names p:nth-of-type(1), .about-us__names p:nth-of-type(2) {
+        display: none;
+    }
+    .about-us__names p:nth-of-type(3) {
+        display: inline;
+    }
+    .about-us {
+        min-height: 36.777778rem;
+    }
 }
