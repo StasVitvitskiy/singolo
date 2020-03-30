@@ -2,16 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Singolo</title>
 </head>
 <body id="body">
     <header class="sticky-menu">
         <div class="content">
-            <h1 class="singolo">
-                SINGOLO<span class="star">*</span>
-            </h1>
-            <nav>
+            <div id="default-menu" class="hidden">
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <h1 class="singolo">
+                    SINGOLO<span class="star">*</span>
+                </h1>
+            </div>
+            <div id="hidden-menu">
+                <div class="burger-hidden">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <h1 class="singolo">
+                    SINGOLO<span class="star">*</span>
+                </h1>
+                <nav>
+                    <ul id="mobile-menu">
+                        <li data-selector=".slider" class="active">HOME</li>
+                        <li class="dot">&nbsp;</li>
+                        <li data-selector=".services">SERVICES</li>
+                        <li class="dot">&nbsp;</li>
+                        <li data-selector=".portfolio">PORTFOLIO</li>
+                        <li class="dot">&nbsp;</li>
+                        <li data-selector=".about-us">ABOUT</li>
+                        <li class="dot">&nbsp;</li>
+                        <li data-selector=".get-a-quote-section">CONTACT</li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="desktop-menu">
                 <ul id="menu">
                     <li data-selector=".slider" class="active">HOME</li>
                     <li class="dot">&nbsp;</li>
